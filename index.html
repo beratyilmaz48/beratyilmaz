@@ -11,6 +11,11 @@
         padding: 0;
         background-color: #f0f2f5;
         color: #333;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    body.koyu {
+        background-color: #121212;
+        color: #f0f2f5;
     }
     header {
         background: linear-gradient(to right, #FF4C4C, #B22222);
@@ -18,10 +23,21 @@
         text-align: center;
         padding: 50px 20px;
         position: relative;
+        transition: background 0.3s;
+    }
+    body.koyu header {
+        background: linear-gradient(to right, #8B0000, #550000);
     }
     header h1 {
         margin: 0;
         font-size: 2em;
+    }
+    #temaBtn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 8px 12px;
+        cursor: pointer;
     }
     nav {
         text-align: center;
@@ -30,6 +46,10 @@
         top: 0;
         z-index: 10;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: background-color 0.3s;
+    }
+    body.koyu nav {
+        background-color: #2a2a2a;
     }
     nav a {
         text-decoration: none;
@@ -39,6 +59,9 @@
         display: inline-block;
         padding: 15px 0;
         cursor: pointer;
+    }
+    body.koyu nav a {
+        color: #FF7F7F;
     }
     nav a:hover {
         color: #FF4C4C;
@@ -52,6 +75,11 @@
         border-radius: 10px;
         margin-top: 20px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: background-color 0.3s, color 0.3s;
+    }
+    body.koyu section {
+        background-color: #1f1f1f;
+        color: #f0f2f5;
     }
     .iletisim {
         display: flex;
@@ -76,6 +104,7 @@
 
 <header>
     <h1>Merhaba</h1>
+    <button id="temaBtn">Tema Değiştir</button>
 </header>
 
 <nav>
@@ -108,6 +137,11 @@
 </section>
 
 <script>
+const temaBtn = document.getElementById("temaBtn");
+temaBtn.addEventListener("click", () => {
+    document.body.classList.toggle("koyu");
+});
+
 function showSection(id) {
     // Tüm bölümleri gizle
     document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
