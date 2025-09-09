@@ -1,113 +1,107 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berat Yılmaz</title>
-    <style>
-        html {
-            scroll-behavior: smooth; /* Smooth scroll aktif */
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f2f5;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(to right, #FF4C4C, #B22222);
-            color: white;
-            padding: 100px 20px; /* Üstte boşluk, sayfa açılınca sadece Merhaba gözükür */
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        nav {
-            text-align: center;
-            margin: 15px 0;
-            position: sticky;
-            top: 0;
-            background-color: #f0f2f5;
-            z-index: 10;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Berat Yılmaz</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f2f5;
+        color: #333;
+    }
+    nav {
+        text-align: center;
+        padding: 15px 0;
+        background-color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+        text-decoration: none;
+        color: #B22222;
+        margin: 0 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    nav a:hover {
+        color: #FF4C4C;
+    }
+    section {
+        display: none; /* Başlangıçta gizli */
+        padding: 50px 20px;
+        max-width: 800px;
+        margin: auto;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .iletisim a {
+        margin-right: 10px;
+        font-size: 1.5em;
+        vertical-align: middle;
+    }
+    .iletisim span {
+        margin-right: 25px;
+        vertical-align: middle;
+    }
+    @media (max-width: 600px) {
         nav a {
-            text-decoration: none;
-            color: #B22222;
-            margin: 0 15px;
-            font-weight: bold;
+            display: block;
+            margin: 5px 0;
         }
-        nav a:hover {
-            color: #FF4C4C;
+        .iletisim a, .iletisim span {
+            display: block;
+            font-size: 1.3em;
+            margin-bottom: 5px;
         }
-        section {
-            padding: 100px 20px; /* Üstten boşluk, header üstüne gelmesin */
-            max-width: 800px;
-            margin: auto;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 15px 10px;
-        }
-        .iletisim a {
-            text-decoration: none;
-            margin-right: 10px;
-            font-size: 1.5em;
-            vertical-align: middle;
-        }
-        .iletisim span {
-            margin-right: 25px;
-            font-size: 1em;
-            vertical-align: middle;
-        }
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.5em;
-            }
-            nav a {
-                display: block;
-                margin: 5px 0;
-            }
-            .iletisim a, .iletisim span {
-                display: inline-block;
-                font-size: 1.3em;
-                margin-bottom: 5px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
-    <header id="anasayfa">
-        <h1>Merhaba</h1>
-    </header>
-    <nav>
-        <a href="#anasayfa">Ana Sayfa</a>
-        <a href="#hakkimda">Hakkımda</a>
-        <a href="#iletisim">İletişim</a>
-    </nav>
-    <section id="hakkimda">
-        <h2>Hakkımda</h2>
-        <p>Bloğuma hoşgeldiniz!</p>
-    </section>
-    <section id="iletisim">
-        <h2>İletişim</h2>
-        <p class="iletisim">
-            <a href="mailto:beratyillmaz48@gmail.com" title="Email">📧</a>
-            <span>beratyillmaz48@gmail.com</span><br>
-            <a href="https://wa.me/905050429856" target="_blank" title="WhatsApp">📱</a>
-            <span>05050429856</span><br>
-            <a href="https://www.instagram.com/beratyilmz" target="_blank" title="Instagram">📸</a>
-            <span>@beratyilmz</span><br>
-            <a href="https://open.spotify.com/artist/3vTiBTCpRfV0tZwEOdx634?si=Po0T1cWkRZOj8h6LNc5xhQ" target="_blank" title="Spotify">🎵</a>
-            <span>Spotify Artist</span>
-        </p>
-    </section>
-    <footer>
-        &copy; 2025 Berat Yılmaz
-    </footer>
+
+<nav>
+    <a onclick="showSection('anasayfa')">Ana Sayfa</a>
+    <a onclick="showSection('hakkimda')">Hakkımda</a>
+    <a onclick="showSection('iletisim')">İletişim</a>
+</nav>
+
+<section id="anasayfa">
+    <h1>Merhaba</h1>
+</section>
+
+<section id="hakkimda">
+    <h2>Hakkımda</h2>
+    <p>Bloğuma hoşgeldiniz!</p>
+</section>
+
+<section id="iletisim">
+    <h2>İletişim</h2>
+    <p class="iletisim">
+        <a href="mailto:beratyillmaz48@gmail.com">📧</a>
+        <span>beratyillmaz48@gmail.com</span>
+        <a href="https://wa.me/905050429856" target="_blank">📱</a>
+        <span>05050429856</span>
+        <a href="https://www.instagram.com/beratyilmz" target="_blank">📸</a>
+        <span>@beratyilmz</span>
+        <a href="https://open.spotify.com/artist/3vTiBTCpRfV0tZwEOdx634?si=Po0T1cWkRZOj8h6LNc5xhQ" target="_blank">🎵</a>
+        <span>Spotify Artist</span>
+    </p>
+</section>
+
+<script>
+function showSection(id) {
+    // Tüm bölümleri gizle
+    document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+    // Sadece seçilen bölümü göster
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
 </body>
 </html>
