@@ -83,7 +83,7 @@
     }
     .iletisim {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap; /* Yan yana */
         align-items: center;
         justify-content: center;
         gap: 15px;
@@ -94,7 +94,8 @@
     }
     @media (max-width: 450px) {
         .iletisim {
-            flex-direction: column;
+            flex-wrap: wrap; /* Çok dar ekranda taşmayı engelle */
+            justify-content: center;
             gap: 10px;
         }
     }
@@ -114,7 +115,7 @@
 </nav>
 
 <section id="anasayfa">
-    <!-- Ana Sayfa içeriği boş, sadece header’daki Merhaba gözüküyor -->
+    <!-- Ana Sayfa içeriği boş, sadece header’da Merhaba gözüküyor -->
 </section>
 
 <section id="hakkimda">
