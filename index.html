@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berat Yılmaz</title>
     <style>
+        html {
+            scroll-behavior: smooth; /* Smooth scroll aktif */
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -15,7 +18,7 @@
         header {
             background: linear-gradient(to right, #FF4C4C, #B22222);
             color: white;
-            padding: 30px 20px;
+            padding: 100px 20px; /* Üstte boşluk, sayfa açılınca sadece Merhaba gözükür */
             text-align: center;
         }
         header h1 {
@@ -25,6 +28,10 @@
         nav {
             text-align: center;
             margin: 15px 0;
+            position: sticky;
+            top: 0;
+            background-color: #f0f2f5;
+            z-index: 10;
         }
         nav a {
             text-decoration: none;
@@ -36,7 +43,7 @@
             color: #FF4C4C;
         }
         section {
-            padding: 20px;
+            padding: 100px 20px; /* Üstten boşluk, header üstüne gelmesin */
             max-width: 800px;
             margin: auto;
         }
