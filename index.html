@@ -12,9 +12,19 @@
         background-color: #f0f2f5;
         color: #333;
     }
+    header {
+        background: linear-gradient(to right, #FF4C4C, #B22222);
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+        position: relative;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2em;
+    }
     nav {
         text-align: center;
-        padding: 15px 0;
         background-color: #fff;
         position: sticky;
         top: 0;
@@ -26,6 +36,8 @@
         color: #B22222;
         margin: 0 15px;
         font-weight: bold;
+        display: inline-block;
+        padding: 15px 0;
         cursor: pointer;
     }
     nav a:hover {
@@ -60,10 +72,17 @@
             font-size: 1.3em;
             margin-bottom: 5px;
         }
+        header h1 {
+            font-size: 1.5em;
+        }
     }
 </style>
 </head>
 <body>
+
+<header>
+    <h1>Merhaba</h1>
+</header>
 
 <nav>
     <a onclick="showSection('anasayfa')">Ana Sayfa</a>
