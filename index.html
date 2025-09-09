@@ -151,14 +151,33 @@ body.koyu section {
 </section>
 
 <script>
+// Sayfa yüklendiğinde tema ve aktif bölüm bilgilerini al
+document.addEventListener("DOMContentLoaded", () => {
+    // Tema
+    if(localStorage.getItem("tema") === "koyu") {
+        document.body.classList.add("koyu");
+    }
+
+    // Aktif bölüm
+    const aktifBolum = localStorage.getItem("aktifBolum") || "anasayfa";
+    showSection(aktifBolum);
+});
+
 const temaBtn = document.getElementById("temaBtn");
 temaBtn.addEventListener("click", () => {
     document.body.classList.toggle("koyu");
+    if(document.body.classList.contains("koyu")) {
+        localStorage.setItem("tema", "koyu");
+    } else {
+        localStorage.setItem("tema", "acik");
+    }
 });
 
 function showSection(id) {
     document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
     document.getElementById(id).style.display = 'block';
+    // Seçilen bölümü kaydet
+    localStorage.setItem("aktifBolum", id);
 }
 </script>
 
