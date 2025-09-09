@@ -82,12 +82,13 @@ body.koyu section {
     color: #f0f2f5;
 }
 
-/* İletişim - Masaüstü */
+/* İletişim bölümü: sol hizalı ve öğeler alt alta, ikon ve yazı yan yana */
 .iletisim {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column; /* öğeler alt alta */
+    align-items: flex-start; /* sola hizala */
+    gap: 15px;
+    padding-left: 20px; /* sol boşluk */
 }
 .iletisim .item {
     display: flex;
@@ -96,12 +97,11 @@ body.koyu section {
     font-size: 1.2em;
 }
 
-/* Mobilde her biri alt alta ama ikon ve yazı yan yana */
+/* Mobilde de aynı hizalama */
 @media (max-width: 600px) {
     .iletisim {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
+        padding-left: 10px;
+        gap: 10px;
     }
 }
 </style>
@@ -120,7 +120,7 @@ body.koyu section {
 </nav>
 
 <section id="anasayfa">
-    <!-- Boş -->
+    <!-- Ana Sayfa boş -->
 </section>
 
 <section id="hakkimda">
