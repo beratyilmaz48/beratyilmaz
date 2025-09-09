@@ -5,100 +5,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Berat Yılmaz</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f2f5;
-        color: #333;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    body.koyu {
-        background-color: #121212;
-        color: #f0f2f5;
-    }
-    header {
-        background: linear-gradient(to right, #FF4C4C, #B22222);
-        color: white;
-        text-align: center;
-        padding: 50px 20px;
-        position: relative;
-        transition: background 0.3s;
-    }
-    body.koyu header {
-        background: linear-gradient(to right, #8B0000, #550000);
-    }
-    header h1 {
-        margin: 0;
-        font-size: 2em;
-    }
-    #temaBtn {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        padding: 8px 12px;
-        cursor: pointer;
-    }
-    nav {
-        text-align: center;
-        background-color: #fff;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        transition: background-color 0.3s;
-    }
-    body.koyu nav {
-        background-color: #2a2a2a;
-    }
-    nav a {
-        text-decoration: none;
-        color: #B22222;
-        margin: 0 15px;
-        font-weight: bold;
-        display: inline-block;
-        padding: 15px 0;
-        cursor: pointer;
-    }
-    body.koyu nav a {
-        color: #FF7F7F;
-    }
-    nav a:hover {
-        color: #FF4C4C;
-    }
-    section {
-        display: none; /* Başlangıçta gizli */
-        padding: 50px 20px;
-        max-width: 800px;
-        margin: auto;
-        background-color: white;
-        border-radius: 10px;
-        margin-top: 20px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        transition: background-color 0.3s, color 0.3s;
-    }
-    body.koyu section {
-        background-color: #1f1f1f;
-        color: #f0f2f5;
-    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+body.koyu {
+    background-color: #121212;
+    color: #f0f2f5;
+}
+header {
+    background: linear-gradient(to right, #FF4C4C, #B22222);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    transition: background 0.3s;
+}
+body.koyu header {
+    background: linear-gradient(to right, #8B0000, #550000);
+}
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+#temaBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+nav {
+    text-align: center;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+body.koyu nav {
+    background-color: #2a2a2a;
+}
+nav a {
+    text-decoration: none;
+    color: #B22222;
+    margin: 0 15px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 15px 0;
+    cursor: pointer;
+}
+body.koyu nav a {
+    color: #FF7F7F;
+}
+nav a:hover {
+    color: #FF4C4C;
+}
+section {
+    display: none;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+body.koyu section {
+    background-color: #1f1f1f;
+    color: #f0f2f5;
+}
+
+/* İletişim - Masaüstü */
+.iletisim {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.iletisim .item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2em;
+}
+
+/* Mobilde her biri alt alta ama ikon ve yazı yan yana */
+@media (max-width: 600px) {
     .iletisim {
-        display: flex;
-        flex-wrap: nowrap; /* Yan yana */
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
         gap: 15px;
+        align-items: center;
     }
-    .iletisim a, .iletisim span {
-        margin: 0;
-        font-size: 1.2em;
-    }
-    @media (max-width: 450px) {
-        .iletisim {
-            flex-wrap: wrap; /* Çok dar ekranda taşmayı engelle */
-            justify-content: center;
-            gap: 10px;
-        }
-    }
+}
 </style>
 </head>
 <body>
@@ -115,7 +120,7 @@
 </nav>
 
 <section id="anasayfa">
-    <!-- Ana Sayfa içeriği boş, sadece header’da Merhaba gözüküyor -->
+    <!-- Boş -->
 </section>
 
 <section id="hakkimda">
@@ -125,16 +130,24 @@
 
 <section id="iletisim">
     <h2>İletişim</h2>
-    <p class="iletisim">
-        <a href="mailto:beratyillmaz48@gmail.com">📧</a>
-        <span>beratyillmaz48@gmail.com</span>
-        <a href="https://wa.me/905050429856" target="_blank">📱</a>
-        <span>05050429856</span>
-        <a href="https://www.instagram.com/beratyilmz" target="_blank">📸</a>
-        <span>@beratyilmz</span>
-        <a href="https://open.spotify.com/artist/3vTiBTCpRfV0tZwEOdx634?si=Po0T1cWkRZOj8h6LNc5xhQ" target="_blank">🎵</a>
-        <span>Spotify Artist</span>
-    </p>
+    <div class="iletisim">
+        <div class="item">
+            <a href="mailto:beratyillmaz48@gmail.com">📧</a>
+            <span>beratyillmaz48@gmail.com</span>
+        </div>
+        <div class="item">
+            <a href="https://wa.me/905050429856" target="_blank">📱</a>
+            <span>05050429856</span>
+        </div>
+        <div class="item">
+            <a href="https://www.instagram.com/beratyilmz" target="_blank">📸</a>
+            <span>@beratyilmz</span>
+        </div>
+        <div class="item">
+            <a href="https://open.spotify.com/artist/3vTiBTCpRfV0tZwEOdx634?si=Po0T1cWkRZOj8h6LNc5xhQ" target="_blank">🎵</a>
+            <span>Spotify Artist</span>
+        </div>
+    </div>
 </section>
 
 <script>
@@ -144,9 +157,7 @@ temaBtn.addEventListener("click", () => {
 });
 
 function showSection(id) {
-    // Tüm bölümleri gizle
     document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
-    // Sadece seçilen bölümü göster
     document.getElementById(id).style.display = 'block';
 }
 </script>
