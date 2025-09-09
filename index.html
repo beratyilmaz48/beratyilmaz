@@ -53,27 +53,21 @@
         margin-top: 20px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .iletisim a {
-        margin-right: 10px;
-        font-size: 1.5em;
-        vertical-align: middle;
+    .iletisim {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
     }
-    .iletisim span {
-        margin-right: 25px;
-        vertical-align: middle;
+    .iletisim a, .iletisim span {
+        margin: 0;
+        font-size: 1.2em;
     }
-    @media (max-width: 600px) {
-        nav a {
-            display: block;
-            margin: 5px 0;
-        }
-        .iletisim a, .iletisim span {
-            display: block;
-            font-size: 1.3em;
-            margin-bottom: 5px;
-        }
-        header h1 {
-            font-size: 1.5em;
+    @media (max-width: 450px) {
+        .iletisim {
+            flex-direction: column;
+            gap: 10px;
         }
     }
 </style>
@@ -91,7 +85,7 @@
 </nav>
 
 <section id="anasayfa">
-    <!-- Ana Sayfa içeriği boş, sadece header’daki Merhaba görünüyor -->
+    <!-- Ana Sayfa içeriği boş, sadece header’daki Merhaba gözüküyor -->
 </section>
 
 <section id="hakkimda">
